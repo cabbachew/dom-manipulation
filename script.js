@@ -24,3 +24,27 @@ meToo.textContent = "ME TOO!";
 div.appendChild(h1);
 div.appendChild(meToo);
 container.appendChild(div);
+
+function alertFunction() {
+    alert("You clicked a button!");
+}
+
+// Note: a DOM element can only have one onclick property
+const button = document.querySelector("#button");
+button.onclick = alertFunction;
+
+// Add event listener
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", function(e) {
+    console.log(e.target);
+    e.target.style.background = "blue";
+});
+
+// Attach listener to groups of nodes
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert(button.id);
+    });
+});
