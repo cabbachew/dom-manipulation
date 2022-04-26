@@ -40,6 +40,11 @@ btn.addEventListener("click", function(e) {
     e.target.style.background = "blue";
 });
 
+const sam = document.querySelector("#sam");
+sam.addEventListener("click", () => {
+    alert("I told you, this is sam's button!");
+});
+
 // Attach listener to groups of nodes
 const buttons = document.querySelectorAll("button");
 
